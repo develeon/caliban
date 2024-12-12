@@ -289,6 +289,8 @@ lazy val codegenSbt = project
           "-Xmx1024M",
           "-Xss4M",
           "-Dplugin.version=" + version.value,
+          "-Dzio.test.version=" + ScriptedDependency.Version.zioTest,
+          "-Dsttp.version=" + ScriptedDependency.Version.sttp,
           s"-Dproject.dir=${baseDirectory.value.getAbsolutePath}"
         )
     },
